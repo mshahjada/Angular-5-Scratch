@@ -1,0 +1,14 @@
+
+<h3>Hello</h3>
+<input type="text"  [(ngModel)]='name' (keyup)='show()'/>
+<button (click)='add_name()'>Add</button>
+
+
+<p>You are writting : </p>
+<p [ngClass]="(name?.length>3)?'red_eye':'green_eye'" [style.font-size]="(name?.length>3)?'14px':'10px'">{{name}}</p>
+
+
+<ul [id]='url'>
+  <li *ngFor='let item of dataset.developer_list'>{{item.Name}}</li>
+</ul>
+
